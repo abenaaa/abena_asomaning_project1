@@ -1,0 +1,531 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of reset */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Clearfix */
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+/* End of Clearfix */
+
+/* top elements */
+
+body {
+  background-color: #efefef;
+	font-family: 'Raleway', sans-serif;
+}
+
+.header {
+  padding-top: 10px;
+  padding-bottom:10px;
+  padding-left: 60px;
+  text-align: left;
+  background-color: #ff7c5e;
+}
+
+.row {
+	width: 100px;
+	height: 100px;
+}
+
+/* beginning of type animation */
+
+h1 {
+  color: #ffffff; 
+  font-family: 'Raleway Extra-Bold', sans-serif;
+  font-size: 50px;
+  padding-left: 68px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 8s steps(60, end); 
+}
+
+p:nth-child(2){
+  animation: type2 8s steps(60, end);
+}
+
+p a{
+  color: #000000;
+  text-decoration: none;
+}
+
+span{
+  animation: blink 1s infinite;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+::selection{
+  background: black;
+}
+
+/* end of type animation, beginning of typography */
+
+h2 {
+  font-family: 'Raleway Extra-Bold', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+h2.contact {
+  font-family: 'Raleway Extra-Bold', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Raleway Extra-Bold', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+h3.left {
+  font-family: 'Raleway Extra-Bold', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: left;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+h6 {
+  font-family: 'Raleway Extra-Bold', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  padding-top: 430px;
+  padding-left: 78px;
+  line-height: 60px;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  line-height: 1.5em;
+  padding-right: 15px;
+}
+
+p.left {
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+  line-height: 1.5em;
+  padding-right: 18px;
+}
+
+.linebreak {
+  margin: auto;
+  max-width: 450px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+p.white {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  line-height: 1.5em;
+  padding-right: 15px;
+  color: #ffffff;
+}
+
+/* div sections */
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1000px;
+	background-color: #efefef;
+}
+
+.main {
+	background-image: url(images/header_placeholder.jpeg);
+  	background-repeat: none;
+	height: 870px;
+}
+
+.icons-1 {
+  width: 33.3%;
+  float: left;
+  height: 252px;
+  padding: 50px;
+  background-color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+
+/*hover state*/
+
+.icons-1.box:hover {
+  background-color: #ff7c5e;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+
+.icons-1.box:hover:after {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  border: 2px solid white;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+}
+
+/*hover state ends*/
+
+.logo {
+  float: left;
+  margin-left: 60px;
+  margin-right: 10px
+}
+
+.intro {
+  line-height: 60px;
+	text-align: left;
+	alignment-baseline: 1.5em;
+	margin-left: 10px;
+}
+
+.icons-2 {
+  width: 33.3%;
+  float: left; 
+  background-color: #ffffff;
+  height: 390px;
+  border-width: solid 1px;
+  border-color: #efefef;
+  padding: 50px;
+  text-align: center;
+}
+
+.icons-3 {
+  width: 33.3%;
+  float: left;
+  background-color: #ffffff;
+  height: 390px;
+  padding: 50px;
+  text-align: center;
+}
+
+.icons-4 {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-left: 210px;
+  padding: 15px;
+}
+
+.icons-5 {
+  max-width: 1000px;
+  margin: auto;
+  margin-left: 210px;
+  padding: 15px;
+}
+
+.about {
+  padding: 50px;
+}
+
+.skill-1 {
+  background-color: #ffffff;
+}
+
+.contact {
+  margin-left: 40px;
+  font-family: 'Raleway Extra-Bold', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 60px;
+}
+
+/* page sections */
+
+.second {
+  max-width: 1000px;
+}
+
+.third {
+  background-color: #ff7c5e;
+  padding: 50px;
+}
+
+.fourth {
+  background-color: #ffffff;
+  padding-right: 20px;
+  height: 420px;
+}
+
+.fifth.clearfix {
+	max-width: 1000px;
+	margin: 0 auto;
+	background-color: #999999;
+}
+
+/* footer and links */
+
+.footer {
+  background-color: #ffffff;
+  padding: 28px;
+  text-align: center;
+}
+
+a:link {
+    color: #999999;
+    text-decoration: none;
+}
+
+a:hover { 
+    background-color: #ff7c5e;
+}
+
+a:visited { 
+    background-color: #ff7c5e;
+}
+
+h5 {
+  position: relative;
+}
+
+h5:after {
+  content:"";
+  position: absolute;
+  width: 10%;
+  height: 3px;
+  left:0;
+  bottom: -3px;
+  background: purple;
+}
+
+/* buttons and unique elements */
+
+button.contact {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ff7c5e; 
+    height:60px;
+    width: 250px;
+    margin-left: 73px;
+    margin-top: 60px;
+}
+
+.button:hover {
+    background-color: #ff7c5e; 
+    color: white;
+}
+
+.contact.form {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Raleway Extra-Bold', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 60px;
+  background-color: #000000;
+}
+
+input {
+	width: 800px;
+	height: 20px;
+	margin: 10px;
+}
+
+#message {
+	width: 800px;
+	height: 200px;
+	margin: 10px;
+}
+
+#submit {
+	width: 100px;
+	height: 30px;
+	margin: 10px;
+	margin-bottom: 35px;
+}
+
+/* skill section images */
+
+img.bio {
+  position: relative;
+  float: left;
+  margin-right: 15px;
+}
+
+/* skill section icons */
+
+.devicon-css3-plain {
+  position: relative;
+  float: left;
+  font-size: 120px;
+  color: #000000;
+  padding: 10px;
+}
+
+.devicon-html5-plain {
+  position: relative;
+  float: left;
+  font-size: 120px;
+  color: #000000;
+  padding: 10px;
+}
+
+.devicon-javascript-plain {
+  position: relative;
+  float: left;
+  font-size: 120px;
+  color: #000000;
+  padding: 10px;
+}
+
+.devicon-jquery-plain {
+  position: relative;
+  float: left;
+  font-size: 120px;
+  color: #000000;
+  padding: 10px;
+}
+
+.devicon-wordpress-plain {
+  position: relative;
+  float: left;
+  font-size: 120px;
+  color: #000000;
+  padding: 10px;
+}
+
+.devicon-sass-original {
+  position: relative;
+  float: left;
+  font-size: 120px;
+  color: #000000;
+  padding: 10px;
+}
+
+.devicon-gulp-plain {
+  position: relative;
+  float: left;
+  font-size: 120px;
+  color: #000000;
+  padding: 10px;
+}
+
+.devicon-github-plain {
+  position: relative;
+  float: left;
+  font-size: 120px;
+  color: #000000;
+  padding: 10px;
+  background-color: #999999;
+}
+
+/* footer section icons */
+
+.fa-linkedin:before {
+  content: "\f0e1";
+  margin: 10px;
+  font-size: 30px;
+}
+
+.fa-twitter:before {
+  content: "\f099";
+  margin: 10px;
+  font-size: 30px;
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+  margin: 10px;
+  font-size: 30px;
+}
